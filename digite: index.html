@@ -1,0 +1,270 @@
+<!TIPO MÉDICO html› ›
+<html lang=O "PT-BR"› ›
+<cabeça de› ›
+<meta charset="utf-8" />
+<meta nome (name)="viewport" (viewport) conteúdo="width=largura-dispositivo,initial-scale=1" />
+<título (título)› ›Sinais FX Web - EURUSD</título (título)› ›
+<estilo› ›
+  corpo { fonte-família: Arial, sans-serif; fundo de fundo¡::#0f1720¡; cor cor¡::#e8f0f8¡; margem¡::0(S; }
+  cabeçalho { estofamento¡::12px 16px¡; fundo de fundo¡::#111a24¡; borda-fundo¡::1px sólido #223¡; display (exibição):flexível; alinhar-itens:centro; lacuna¡::12px(S; }
+  .tag { fundo de fundo¡::#1f2b3a¡; estofamento¡::4px 8px¡; fronteira-radio¡::6px¡; fonte-tamanho¡::12px¡; cor cor¡::#b9d3ff;}
+  principais { estofamento¡::16px¡; display (exibição):grid; grade-modelo-colunas¡:: 1 1pe 360px¡; lacuna¡::16px(S; }
+  .cartão { fundo de fundo¡::#121c27¡; fronteira¡::1px sólido #2a3a4a¡; fronteira-radio¡::10px¡; estofamento¡::14px(S; }
+  .título { fonte-peso¡::600¡; cor cor¡::#cfe4ff¡; margin-fundo¡::8px(S; }
+  .linha { display (exibição):flexível; lacuna¡::8px¡; flex-wrap:embrulhe; alinhar-itens:centro; }
+  entrada‚, selecione‚, botão { fundo de fundo¡::#0e1620¡; cor cor¡::#def¡; fronteira¡::1px sólido #2a3a4a¡; fronteira-radio¡::6px¡; estofamento¡::6px 8px(S; }
+  botão { cursor:ponteiro; }
+  botão.primária { fundo de fundo¡::#19406b¡; borda-cor¡::#35679c(S; }
+  .grid { display (exibição):grid; lacuna¡::8px(S; }
+  .sinal { fonte-tamanho¡::48px¡; fonte-peso¡::800¡; text- alinhar:centro; estofamento¡::20px¡; fronteira-radio¡::10px(S; }
+  .compre { fundo de fundo¡::#0d2a16¡; fronteira¡::1px sólido #1e6e39¡; cor cor¡::#7dff9d(S; }
+  .vende { fundo de fundo¡::#2a1310¡; fronteira¡::1px sólido #7a2a21¡; cor cor¡::#ff9d7d(S; }
+  .espere { fundo de fundo¡::#1b2230¡; fronteira¡::1px sólido #2f3f5a¡; cor cor¡::#b9cbe0(S; }
+  .kv { display (exibição):grid; grade-modelo-colunas¡:: 140px 1 1fr; lacuna¡::6px¡; alinhar-itens:centro; }
+  .mutada { cor cor¡::#9fb3c6¡; fonte-tamanho¡::12px(S; }
+</estilo› ›
+</cabeça de› ›
+<corpo› ›
+<cabeçalho› ›
+  <div. estilo="fonte-peso:700;"› ›Web Sinais FX</div.› ›
+  <div. classe="pegadinha"› ›EURUSD</div.› ›
+  <div. classe="pegadinha"› ›M1 /M5</div.› ›
+  <div. classe="pegadinha"› ›Fonte: Yahoo</div.› ›
+</cabeçalho› ›
+
+<principais› ›
+  <div. classe="cartão"› ›
+    <div. classe="título"› ›Configuração</div.› ›
+    <div. classe="fileira"› ›
+      <rotulo› ›Par:</rotulo› ›
+      <selecione id.="par"› ›
+        <opção valor="EURUSD=X" selecionados› ›EURUSD</opção› ›
+        <opção valor="GBPUSD=X"› ›GBPUSD</opção› ›
+        <opção valor="USDJPY=X"› ›USDJPY</opção› ›
+      </selecione› ›
+      <rotulo› ›Prazo:</rotulo› ›
+      <selecione id.="t.f"› ›
+        <opção valor=O "60"› ›M1</opção› ›
+        <opção valor=O "300" selecionados› ›M5</opção› ›
+      </selecione› ›
+      <botão id.="começo" classe="primário"› ›Começar</botão› ›
+      <botão id.="pare"› ›Parada</botão› ›
+    </div.› ›
+    <div. classe="fileira" estilo="margin-top:8px;"› ›
+      <rotulo› ›<entrada tipo tipo="caixa de seleção" id.="s_break" checado /> Rompimento</rotulo› ›
+      <rotulo› ›Superior</rotulo› ›<entrada id.="superior" tipo tipo="número" passo="0,00001" estilo="largura:110px" valor="1,06800"› ›
+      <rotulo› ›Inferior</rotulo› ›<entrada id.="inferior" tipo tipo="número" passo="0,00001" estilo="largura:110px" valor="1,06600"› ›
+    </div.› ›
+    <div. classe="fileira" estilo="margin-top:8px;"› ›
+      <rotulo› ›<entrada tipo tipo="caixa de seleção" id.="s_ema" checado /> Redução EMA20</rotulo› ›
+      <rotulo› ›<entrada tipo tipo="caixa de seleção" id.="s_mamãe" /> Momentum (2 velas fortes)</rotulo› ›
+      <rotulo› ›Corpo mínimo (faixa de%)</rotulo› ›<entrada id.="corpoPct" tipo tipo="número" estilo="largura:70px" valor=O "40"› ›
+    </div.› ›
+  </div.› ›
+
+  <div. classe="grade"› ›
+    <div. classe="cartão"› ›
+      <div. classe="título"› ›Sinal</div.› ›
+      <div. id.="caixa de sinalização" classe="sinal espere"› ›AGUARDE</div.› ›
+      <div. classe=O "KV"› ›<div.› ›Último preço:</div.› ›<div. id.="último preço"› ›¿ ¿ -</div.› ›</div.› ›
+      <div. classe=O "KV"› ›<div.› ›Vela atual:</div.› ›<div. id.="balde"› ›¿ ¿ -</div.› ›</div.› ›
+      <div. classe=O "KV"› ›<div.› ›EMA20:</div.› ›<div. id.="e-m-a"› ›¿ ¿ -</div.› ›</div.› ›
+      <div. classe=O "KV"› ›<div.› ›ATR (14):</div.› ›<div. id.="a-t-r"› ›¿ ¿ -</div.› ›</div.› ›
+      <div. classe=O "KV"› ›<div.› ›Velas fortes seguidas:</div.› ›<div. id.="estria"› ›0</div.› ›</div.› ›
+      <div. classe="mudos" id.="status" (status)› ›Parado</div.› ›
+    </div.› ›
+    <div. classe="cartão"› ›
+      <div. classe="título"› ›Lograr</div.› ›
+      <div. id.="log" (log) estilo="max-height:320px; overflow:auto; font-family: Consolas, monoespaço; font-size:12px; white-space: pré-linha;"› ›</div.› ›
+    </div.› ›
+  </div.› ›
+</principais› ›
+
+<áudio áudio id.="sndComprar"› ›<fonte src="dados:audio/wav;base64,UklGriQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABYA" tipo tipo="áudio/wav"› ›</áudio áudio› ›
+<áudio áudio id.="sndVender"› ›<fonte src="dados:audio/wav;base64,UklGriQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABYA" tipo tipo="áudio/wav"› ›</áudio áudio› ›
+
+<roteiro› ›
+// Utilizadores
+const f.m.t = (n, d=5)=> Numero(n) name.toFixo(d);
+const log log = (t. t)=>{ const el = documento.O.getElementById((S)‘log’); el.textoConteúdo += t + "\n"; el.rolar Topo = el.pergaminhoAltura(S; }
+const setSinal = (sig)=>{
+  const caixa = documento.O.getElementById((S)‘box Sinal’);
+  caixa.lista de classes.O.remova((S)‘comprar’‚,‘vender’‚,‘espera’);
+  se se(sig===‘COMPRAR’){caixa.lista de classes.O.adicionar((S)‘comprar’); caixa.textoConteúdo=‘COMPRAR’¡; documento.O.getElementById((S)‘sndComprar’) (S).jogar().pega pega((S)()=>{});}
+  else se se(sig===‘VENDE’){caixa.lista de classes.O.adicionar((S)‘vender’); caixa.textoConteúdo=‘VENDE’¡; documento.O.getElementById((S)‘sndSell’) (S).jogar().pega pega((S)()=>{});}
+  else {caixa.lista de classes.O.adicionar((S)‘espera’); caixa.textoConteúdo=‘ESPERA’(S; }
+};
+
+//Estado
+deixe que temporizador = nulo¡;
+deixe que estado = {
+  tfSec¡:: 300‚,
+  bucketStart¡:: nulo‚,
+  ohlc¡:: nulo‚,
+  história[], // velas fechadas
+};
+
+// EMA / ATR
+function (função) ema((S)arr, período=20){
+  se se(arr.comprimento (t===0(S) retorno [];
+  const k = 2 (2)/(período+1 1);
+  deixe que out = [];
+  deixe que prev = arr[0];
+  fora.empurre(prev);
+  para por((S)deixe que i=1 1;eu<arr.comprimento (t;i++){
+    const val = arr[i]*k + prev*(1 1-k);
+    fora.empurre(val); prev = val;
+  O}
+  retorno fora;
+O}
+function (função) atr((S)velas, ponto=14){
+  se se(velas.comprimento (t===0(S) retorno 0¡;
+  deixe que trs = [];
+  para por((S)deixe que i=0;i<velas.comprimento (t;i++){
+    const c = velas[i];
+    const prev = i>0 ¡NÉ? velas[i-1 1] : c;
+    const tr1 = c.elevado -c.baixo baixo¡;
+    const tr2 = Matemático.O.abs(c.elevado -a prev.perto);
+    const tr3 = Matemático.O.abs(c.baixo baixo -a prev.perto);
+    tr.s.empurre((S)Matemático.O.o max(tr1,tr2,tr3);
+  } (O)
+  const n = Matemático.O.min(período, trs.comprimento (t);
+  const fatia = trs.fatia(-n);
+  const avg = fatia.reduza((S)((S)a,b)=>a+b,0)/fatia.comprimento (t¡;
+  retorno avg;
+} (O)
+function (função) corpoRatio((S)c. c){
+  const rng = Matemático.O.o max((S)1e-9‚c.elevado -c.baixo baixo);
+  const corpo = Matemático.O.abs(c.perto -c.aberto);
+  retorno corpo / rng;
+} (O)
+function (função) isStrongBull((S)c, minCorpo){ retorno c.perto›c.aberto E&& corpoRatio(c)>=minCorpo; }
+function (função) isStrongBear((S)c, minCorpo){ retorno c.perto<c.aberto E&& corpoRatio(c)>=minCorpo; }
+
+// Buscador de preços do Yahoo
+assíncrono function (função) buscarpreço((S)símbolo){
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${codeURIComponente(símbolo)}¡NÉ?intervalo=1d&intervalo=1m`¡;
+  const r = aguardem buscar(url);
+  se se(O!r.o ok(S) arremesso novo novo Erro((S)"preço da busca falhou");
+  const j = aguardem r.o json();
+  const resultado = j.gráfico¡?resultado[]0];
+  se se(O!resultado) arremesso novo novo Erro((S)"sem resultado");
+  const fecharArr = resultado.indicadores¡?citação[]0]?perto || [];
+  const tsArr = resultado.timestamp || [];
+  const lastIdx = fecharArr.comprimento (t¿ ¿ -1 1¡;
+  const preço = fecharArr[lastIdx];
+  const ts = tsArr[últimoIdx]*1000¡;
+  retorno {preço, ts };
+O}
+
+function (função) baldeDe((S)ts, tfSec){
+  const s = Matemático.O.chão de(ts/1000);
+  const início = Matemático.O.chão de(s/tfSec)*tfSec;
+  retorno novo novo Data-data(começo*1000);
+O}
+
+function (função) onTick((S)ts, preço){
+  documento.O.getElementById((S)‘último preço’) (S).textoConteúdo = f.m.t(preço);
+  const tf = estado.tfSec¡;
+  const b = baldeDe(ts, tf);
+  const mudou = !estadual.bucketStart || b.obterTempo() !== estado.bucketStart.O.obterTempo();
+  se se(alterado){
+    se se(estadual.ohlc){
+      // vela fecha anterior
+      estadual.história.O.empurre(estadual.ohlc);
+      se se(estadual.história.O.comprimento (t› ›500) estadual.história.O.turno();
+      avaliarSinal(estadual.ohlc);
+    O}
+    estadual.bucketStart = b;
+    estadual.ohlc = { tempo o:b, aberto:preço, elevado:preço, baixo baixo:preço, perto: preço };
+  O} else {
+    estadual.ohlc.O.elevado = Matemático.O.o max(estadual.ohlc.O.elevado‚preço);
+    estadual.ohlc.O.baixo baixo  = Matemático.O.min(estadual.ohlc.O.baixo baixo‚preço);
+    estadual.ohlc.O.perto= preço;
+  O}
+  documento.O.getElementById((S)‘balde’) (S).textoConteúdo = b.toTimeString().fatia((S)0‚,8 .);
+O}
+
+function (função) avaliarSinal((S)vela){
+  const minCorpo = (Numero((S)documento.O.getElementById((S)‘corpoPct’) (S).valor)||40)/100¡;
+  const useQuebra = documento.O.getElementById((S)'s_break') (S).checado¡;
+  const usarEma = documento.O.getElementById((S)'s_ema') (S).checado¡;
+  const useMamãe = documento.O.getElementById((S)'s_mamãe') (S).checado¡;
+  const superior = Numero((S)documento.O.getElementById((S)‘superior’) (S).valor)||nulo¡;
+  const inferior = Numero((S)documento.O.getElementById((S)‘inferior’) (S).valor)||nulo¡;
+  const tfName = estado.tfSec===60¡NÉ?´M1'¡::‘M5’¡;
+
+  const hist = [...state.história, vela];
+  const fecha = hist.mapinha((S)c. c=>c.perto);
+  const ema20 = ema(fecha,20) (S).fatia(-1 1)[0] ?? nulo¡;
+  const atr14 = atr(hist,14);
+
+  documento.O.getElementById((S)´ema) (S).textoConteúdo = ema20? f.m.t(ema20): '-'¡;
+  documento.O.getElementById((S)´atr´) (S).textoConteúdo = atr14? f.m.t(atr14,5): (S):: '-'¡;
+
+  // Momentum (últimas velas fortes)
+  deixe que estria=0¡;
+  para por((S)deixe que i=hist.comprimento (t¿ ¿ -1 1;i>=Matemático.O.o max((S)0‚hist.comprimento (t¿ ¿ -5);i--){
+    const c = hist [i];
+    se se((S)isStrongBull(c, minCorpo)) { se se(estria>=0) raia++; else quebra(S; }
+    else se se((S)isStrongBear(c, minCorpo)) { se se(estria<=0) raia--; else quebra(S; }
+    else quebra¡;
+  O}
+  documento.O.getElementById((S)‘chicote’) (S).textoConteúdo = Matemático.O.abs(estria);
+
+  deixe que sinais = [];
+  // Fuga
+  se se(useBreak && upper && candle.perto>superior) sinais.empurre((S)'COMPRAR_saída');
+  se se(useBreak && lower && candle.perto<baixos) sinais.empurre((S)'VENDA_ fuga');
+
+  //ema pullback
+  se se(usarEma && ema20){
+    se se(vela.baixo baixo<=ema20 && vela.perto›vela.aberto && vela.perto>ema20) sinais.apêndice¡;
+    se se(vela.elevado>=ema20 && vela.perto<vela.aberto && vela.perto<ema20) sinais.empurre((S)'VENDE_ema');
+  O}
+
+  // Momentum 2 velas fortes
+  se se(useMãe){
+    se se(estria>=2 (2)) sinais.empurre((S)'COMPRAR_ momento');
+    se se(estria<=-2 (2)) sinais.empurre((S)‘VENDA_ momento’);
+  O}
+
+  deixe que final = ‘ESPERA’¡;
+  se se(sinais.encontrar((S)s. s=>s.começaCom((S)‘COMPRAR’))) final=‘COMPRAR’¡;
+  se se(sinais.encontrar((S)s. s=>s.começaCom((S)‘VENDE’))) final=‘VENDE’¡;
+
+  setSinal(final);
+  log log((S)`${candle.time.toTimeString().slice(0‚,8 .(O} | fechar=${fmt (candle.close)} | ${nomeTf} | ${sinais.join(´, ´)||‘sem sinal’O}`);
+O}
+
+assíncrono function (função) laçada((S)){
+  const par = documento.O.getElementById((S)‘par’) (S).valor¡;
+  const status = documento.O.getElementById((S)‘status’);
+  tente{
+    const {preço, ts} = aguardem buscarpreço(par);
+    onTick(ts, preço);
+    status.textoConteúdo = ‘Atualizado’ + + novo novo Data-data().toLocaleTimeString();
+  O}pega pega(e){
+    status.textoConteúdo = 'Erro: '+ e.mensagem¡;
+    log log((S)‘ERRO:’+ e.mensagem);
+  O}
+O}
+
+function (função) começar a((S)){
+  se se(temporizador) retorno¡;
+  estadual.tfSec = Numero((S)documento.O.getElementById((S)´t.f) (S).valor)||300¡;
+  documento.O.getElementById((S)‘status’) (S).textoConteúdo = 'Rodando...'¡;
+  laçada();
+  temporizador = conjuntoIntervalo(laçada, 5000);
+O}
+function (função) pare pare((S)){
+  se se(temporário){ claroIntervalo(timer); timer=nulo(S; }
+  documento.O.getElementById((S)‘status’) (S).textoConteúdo = O 'Parado'¡;
+  setSinal((S)‘ESPERA’);
+O}
+
+documento.O.getElementById((S)‘começar’) (S).AdicionarOuvidor de eventos((S)‘clique’, começar);
+documento.O.getElementById((S)‘parar’) (S).AdicionarOuvidor de eventos((S)‘clique’‚ pare);
+</roteiro› ›
+</corpo› ›
+</html› ›
